@@ -1,4 +1,4 @@
-PokeApi
+## PokeApi
 
 Aplicación de escritorio en Java Swing que consulta la PokeAPI y simula un combate por turnos entre dos Pokémon.
 
