@@ -14,7 +14,7 @@ public class Pokemon {
     private int speed;
     private int hpActual;
 
-    public Pokemon(String nombre, List<String> tipos, String spriteUrl, int hp, int attack, int defense, int speed, int hpActual) {
+    public Pokemon(String nombre, List<String> tipos, String spriteUrl, int hp, int attack, int defense, int speed) {
         this.nombre = nombre;
         this.tipos = tipos;
         this.spriteUrl = spriteUrl;
