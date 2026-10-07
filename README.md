@@ -46,7 +46,7 @@ lib/          json-20230227.jar
 | Regla | Detalle |
 |---|---|
 | Quién inicia | El de mayor `Speed`; si empatan, se decide al azar |
-| Daño base | `ATK del atacante * random(0-1) - DEF del defensor * random(0-1)` |
+| Daño base | `ATK del atacante * 0.5 - DEF del defensor * 0.25` |
 | Daño final | `base * efectividad * (1.5 si es crítico)`, redondeado y con mínimo 1 |
 | Crítico | 10 % de probabilidad, multiplica el daño x1.5 |
 | Efectividad | Se calcula con el **primer tipo** de cada Pokémon |
