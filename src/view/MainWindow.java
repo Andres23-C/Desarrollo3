@@ -1,7 +1,7 @@
 package view;
 
-import battle.Battle;                  // NUEVO
-import battle.BattleListener;          // NUEVO
+import battle.Battle;
+import battle.BattleListener;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
@@ -40,13 +40,13 @@ public class MainWindow extends JFrame {
         jugador1.setAlCargar(revisar);
         jugador2.setAlCargar(revisar);
 
-        btnFight.addActionListener(e -> iniciarCombate());   // NUEVO
+        btnFight.addActionListener(e -> iniciarCombate());
 
         pack();
         setLocationRelativeTo(null);
     }
 
-    // NUEVO: crea el combate y lo conecta con la pantalla mediante el listener
+    // crea el combate y lo conecta con la pantalla mediante el listener
     private void iniciarCombate() {
         btnFight.setEnabled(false); // evita lanzar dos combates a la vez
         log.setText("");
