@@ -13,7 +13,7 @@ Autores: Marlon Andres Cuellar y Nicol Vanessa Peña Jimenez
 
 ## Requisitos
 
-- JDK 26
+- JDK 27
 - IntelliJ IDEA (o cualquier IDE que abra proyectos IntelliJ)
 - Conexión a internet (para consultar la PokeAPI y descargar los sprites)
 - Librería `lib/json-20230227.jar` (ya incluida en el repositorio)
@@ -24,7 +24,7 @@ Autores: Marlon Andres Cuellar y Nicol Vanessa Peña Jimenez
    ```
    git clone https://github.com/Andres23-C/Desarrollo3.git
    ```
-2. Abrir la carpeta del proyecto en IntelliJ con el JDK 26.
+2. Abrir la carpeta del proyecto en IntelliJ con el JDK 27.
 3. Agregar la librería JSON: **File → Project Structure → Libraries → + → Java** y seleccionar `lib/json-20230227.jar`.
 4. Ejecutar la clase `view.MainWindow`.
 5. En cada panel de jugador, escribir el nombre de un Pokémon (por ejemplo `pikachu`) y pulsar **Load**, o pulsar **Random**.
