@@ -61,6 +61,20 @@ La lógica del combate está en el paquete `battle`, separada por completo de la
 
 Para no bloquear la ventana, las peticiones a la PokeAPI y la descarga de sprites se hacen con `SwingWorker`, y `Battle` ejecuta el bucle del combate en un hilo aparte con una pausa de 800 ms entre turnos. La interfaz traslada cada evento del combate al hilo de Swing con `SwingUtilities.invokeLater`. El modelo `Pokemon` garantiza que el HP nunca sea negativo y la fórmula de daño garantiza un mínimo de 1 por ataque, de modo que todo combate termina.
 
+
+## Capturas de pantalla
+
+Las capturas están alojadas en Google Drive:
+
+| # | Pantalla | Enlace |
+|---|---|---|
+| 1 | Pantalla inicial | [Ver captura](https://drive.google.com/file/d/12VsxfvEjdP9OGH1ReyqdNzu17edkCJst/view?usp=drive_link) |
+| 2 | Pokémon cargados | [Ver captura](https://drive.google.com/file/d/12At70TjYOJO3-3RhRb2gsZSm81vg13gX/view?usp=drive_link) |
+| 3 | Combate en curso | [Ver captura](https://drive.google.com/file/d/1KMX04PkXezGOTE4FfUVT_Sxh62tMNJwC/view?usp=drive_link) |
+| 4 | Ganador del combate | [Ver captura](https://drive.google.com/file/d/11IHUlOpKP4r4FAoaIFchJskgSkVX34ux/view?usp=drive_link) |
+| 5 | Pokémon no encontrado | [Ver captura](https://drive.google.com/file/d/1FTo1133Dgb08P83duyDDu_Zn_ca9xeqS/view?usp=drive_link) |
+
+
 ## Tecnologías
 
 - Java 26 y Swing
