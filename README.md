@@ -64,15 +64,26 @@ Para no bloquear la ventana, las peticiones a la PokeAPI y la descarga de sprite
 
 ## Capturas de pantalla
 
-Las capturas están alojadas en Google Drive:
+### Interfaz principal
 
-| # | Pantalla | Enlace |
-|---|---|---|
-| 1 | Pantalla inicial | [Ver captura](https://drive.google.com/file/d/12VsxfvEjdP9OGH1ReyqdNzu17edkCJst/view?usp=drive_link) |
-| 2 | Pokémon cargados | [Ver captura](https://drive.google.com/file/d/12At70TjYOJO3-3RhRb2gsZSm81vg13gX/view?usp=drive_link) |
-| 3 | Combate en curso | [Ver captura](https://drive.google.com/file/d/1KMX04PkXezGOTE4FfUVT_Sxh62tMNJwC/view?usp=drive_link) |
-| 4 | Ganador del combate | [Ver captura](https://drive.google.com/file/d/11IHUlOpKP4r4FAoaIFchJskgSkVX34ux/view?usp=drive_link) |
-| 5 | Pokémon no encontrado | [Ver captura](https://drive.google.com/file/d/1FTo1133Dgb08P83duyDDu_Zn_ca9xeqS/view?usp=drive_link) |
+![Interfaz principal](Capturas/Pantalla_inicial.jpeg)
+
+### Pokémon no encontrado
+
+![Pokémon no encontrado](Capturas/pokemon_no_encontrado.jpeg)
+
+### Pokémon Cargado
+
+![Pokémon Cargado](Capturas/pokemon_cargado_Fight_deshabilitado.jpeg)
+
+### Pokémon seleccionados
+
+![Pokémon seleccionados](Capturas/Pokemon_cargados.jpeg)
+
+### Combate
+
+![Combate](Capturas/ganador.jpeg)
+
 
 
 ## Tecnologías
