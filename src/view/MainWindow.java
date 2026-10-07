@@ -1,5 +1,8 @@
 package view;
 
+import battle.Battle;                  // NUEVO
+import battle.BattleListener;          // NUEVO
+
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -37,8 +40,48 @@ public class MainWindow extends JFrame {
         jugador1.setAlCargar(revisar);
         jugador2.setAlCargar(revisar);
 
+        btnFight.addActionListener(e -> iniciarCombate());   // NUEVO
+
         pack();
         setLocationRelativeTo(null);
+    }
+
+    // NUEVO: crea el combate y lo conecta con la pantalla mediante el listener
+    private void iniciarCombate() {
+        btnFight.setEnabled(false); // evita lanzar dos combates a la vez
+        log.setText("");
+
+        BattleListener listener = new BattleListener() {
+            @Override
+            public void onTurn(String attacker, String defender, int damage, boolean critical, double modifier) {
+                // Llega desde el hilo del combate: Swing solo se toca con invokeLater
+                SwingUtilities.invokeLater(() -> {
+                    String texto = attacker + " ataca a " + defender + ": " + damage + " de daño";
+                    if (critical) texto += " ¡CRÍTICO!";
+                    if (modifier > 1.0) texto += " (súper efectivo)";
+                    else if (modifier < 1.0) texto += " (poco efectivo)";
+                    log.append(texto + "\n");
+                });
+            }
+
+            @Override
+            public void onHpChanged(String pokemon, int hpActual) {
+                SwingUtilities.invokeLater(() -> {
+                    if (pokemon.equals(jugador1.getPokemon().getNombre())) {
+                        jugador1.getPanelPokemon().actualizarHp(hpActual);
+                    } else if (pokemon.equals(jugador2.getPokemon().getNombre())) {
+                        jugador2.getPanelPokemon().actualizarHp(hpActual);
+                    }
+                });
+            }
+
+            @Override
+            public void onBattleEnded(String winner) {
+                SwingUtilities.invokeLater(() -> log.append("¡Ganó " + winner + "!\n"));
+            }
+        };
+
+        new Battle(jugador1.getPokemon(), jugador2.getPokemon(), listener).iniciar();
     }
 
     public static void main(String[] args) {
